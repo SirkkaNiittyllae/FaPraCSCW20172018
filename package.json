@@ -1,12 +1,12 @@
 {
-  "name": "fapra17-starter",
+  "name": "fapra17",
   "version": "0.1.1",
   "description": "A starting point for Node.js express apps with TypeScript",
   "repository": {
     "type": "git",
     "url": "https://gitlab.pi6.fernuni-hagen.de/ks/fapra/starter-kit.git"
   },
-  "author": "Niels Seidel",
+  "author": "CLO",
   "license": "MIT",
   "scripts": {
     "start": "npm run build && npm run watch",

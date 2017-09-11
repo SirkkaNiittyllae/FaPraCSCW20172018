@@ -1,0 +1,51 @@
+
+<% layout( 'layout' ) -%>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3"><%= title %></h1>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Anmeldung registrierter Benutzer</h2>
+          <p>
+            Bitte melden Sie sich hier mit Ihren Benutzerdaten an </p> 
+            <form class="form-horizontal">
+                    <div class="form-group">
+                      <label class="control-label col-sm-3" for="email_login">Email:</label>
+                      <div class="col-sm-6">
+                        <input type="email" class="form-control" id="email_login" placeholder="Email-Adresse hier eingeben">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-3" for="pwd_login">Password:</label>
+                      <div class="col-sm-6"> 
+                        <input type="password" class="form-control" id="pwd_login" placeholder="Passwort hier eingeben">
+                      </div>
+                    </div>
+                    <div class="form-group"> 
+                      <div class="col-sm-offset-3 col-sm-9">
+                        <div class="checkbox">
+                          <label><input type="checkbox"> Erinnere dich an mich.</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group"> 
+                      <div class="col-sm-offset-3 col-sm-9">
+                        <button type="submit" class="btn btn-default">Anmelden</button>
+                      </div>
+                    </div>
+                  </form>
+          <h2>Registrierung neuer Benutzer</h2>
+          <p>
+          Sie haben noch kein Benutzerkonto? Melden Sie sich hier einfach an </p> 
+          <p><a class="btn btn-secondary" href="clo_registrieren" role="button">Neues Benutzerkonto anlegen &raquo;</a></p>
+        </div>
+      </div> 
+    </div> <!-- /container -->

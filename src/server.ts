@@ -18,7 +18,13 @@ const ejs = require("ejs-locals");
  */
 import * as homeController from "./controllers/home";
 import * as userController from "./controllers/user";
-
+import * as clo_loginController from "./controllers/clo_login";
+import * as clo_impressumController from "./controllers/clo_impressum";
+import * as clo_agbsController from "./controllers/clo_agbs";
+import * as clo_shopController from "./controllers/clo_shop";
+import * as clo_registrierenController from "./controllers/clo_registrieren";
+import * as clo_gruppenController from "./controllers/clo_gruppen";
+import * as clo_anmeldenController from "./controllers/clo_anmelden";
 /**
  * Create Express server.
  */
@@ -57,7 +63,47 @@ app.get("/", homeController.index);
  * User examples routes.
  */
 app.get("/user", userController.getPage);
+app.get("/clo_login", clo_loginController.getPage);
+app.get("/clo_impressum", clo_impressumController.getPage);
+app.get("/clo_agbs", clo_agbsController.getPage);
+app.get("/clo_anmelden", clo_anmeldenController.getPage);
+app.get("/clo_registrieren", clo_registrierenController.getPage);
+app.get("/clo_gruppen", clo_gruppenController.getPage);
+app.get("/clo_shop", clo_shopController.getPage);
 
+
+
+//db 
+/**
+var options = {
+  //init  options
+    promiseLib: promise
+  };
+var promise = require('bluebird');
+var pgp = require('pg-promise')(options);
+var db = pgp({
+  host: 'localhost',
+  port: 5432,
+  database: 'dorfladen',
+  user: 'dorfladen',
+  password: 'dorfladen'
+});
+
+//oder 
+//var connectionString = 'postgres://dorfladen:dorfladen@localhost:5432/dorfladen';
+//var db = pgp(connectionString);
+
+ 
+*/
+
+
+/**
+ TODO: db.definieren & stuff importieren
+//app.get("/api/gruppen", db.getAllGruppen);
+//ap.post('/api/user', db.createUser);
+//app.put('/api/user/:id', db.updateUser);
+//app.get('/api/user/', db.getAllUser);
+*/
 
 /**
  * Page not found. Last route.
